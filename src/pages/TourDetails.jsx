@@ -116,7 +116,7 @@ const TourDetails = () => {
 
     <br />
                            <h5>Ask Your Queries Here!</h5>
-                           <h7><p><a href="https://tbot-azure.vercel.app/" target="_blank">Our ChatBot😊</a></p></h7>
+                           <h7><b><a href="https://tbot-azure.vercel.app/" target="_blank">Travel-Trek ChatBot😊</a></b></h7>
                         </div>
 
 
