@@ -18,8 +18,8 @@ const servicesData = [
    },
    {
       imgUrl: customizationImg,
-      title: 'Proper Map Facilities',
-      desc: `Travel-Trek provides location and its maps alongwith it.`,
+     title: 'Proper ChatBot Facility',
+      desc: Travel-Trek provides a Chatbot where a Traveler can ask for their Queries.,
    },
 ]
 
