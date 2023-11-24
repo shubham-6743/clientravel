@@ -55,9 +55,7 @@ const About = () => {
             </Row>
          </Container>
       </section>
-  </>
-    
-  
+  </>  
 }
 
 export default About

@@ -13,7 +13,6 @@ import MasonryImagesGallery from '../components/Image-gallery/MasonryImagesGalle
 import Testimonials from '../components/Testimonial/Testimonials'
 import NewsLetter from '../shared/Newsletter'
 
-
 const Home = () => {
    return <>
       {/* ========== HERO SECTION ========== */}
