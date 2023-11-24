@@ -18,7 +18,7 @@ const servicesData = [
    },
    {
       imgUrl: customizationImg,
-     title: 'Proper ChatBot Facility',
+      title: 'Proper ChatBot Facility',
       desc: Travel-Trek provides a Chatbot where a Traveler can ask for their Queries.,
    },
 ]
