@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Style.css";
+import { weatherOfCity } from "../../pages/TourDetails.jsx";
 
 const Demo = () => {
   // usestate ma here city is initial value and setCity is updated value
   const [city, setCity] = useState(null);
-  const [search, setSearch] = useState("Mathura");
+  const [search, setSearch] = useState(weatherOfCity);
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -33,7 +34,7 @@ const Demo = () => {
         {/* using terminatory operator */}
 
         {!city ? (
-          <p className="nodata">No data found</p>
+          <p className="nodata">No data found. Try after 30 seconds.</p>
         ) : (
           <>
             <div className="info">

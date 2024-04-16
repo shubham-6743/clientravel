@@ -16,6 +16,7 @@ import NewsLetter from '../shared/Newsletter'
 const Home = () => {
    return <>
       {/* ========== HERO SECTION ========== */}
+
       <section>
          <Container>
             <Row>
@@ -41,12 +42,12 @@ const Home = () => {
                </Col> */}
                <Col lg='2'>
                   <div className="hero__img-box hero__video-box mt-4">
-                     <video src={heroVideo} alt="" controls />
+                     <video src={heroVideo} autoPlay muted loop />
                   </div>
                </Col>
                <Col lg='2'>
                   <div className="hero__img-box hero__video-box2 mt-4">
-                     <video src={hero_Video} alt="" controls />
+                     <video src={hero_Video} autoPlay muted loop />
                   </div>
                </Col>
                {/* <Col lg='2'>
@@ -152,7 +153,7 @@ const Home = () => {
             <Row>
                <Col lg='12'>
                   <Subtitle subtitle={'Users Love'} />
-                  <h2 className="testimonial__title">What our Customer say about us</h2>
+                  <h2 className="testimonial__title">What our Customers say about us</h2>
                </Col>
                <Col lg='12'>
                   <Testimonials />

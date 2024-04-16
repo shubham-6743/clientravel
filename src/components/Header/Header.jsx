@@ -18,8 +18,12 @@ const nav__links = [
       path: '/tours',
       display: 'Tours'
    },
+   {
+      path: '/mytours',
+      display: 'MyTours'
+   }
+      
 ]
-
 const Header = () => {
    const headerRef = useRef(null)
    const menuRef = useRef(null)
@@ -46,9 +50,7 @@ const Header = () => {
 
       return window.removeEventListener('scroll', stickyHeaderFunc)
    })
-
    const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
-
    return (
       <header className='header' ref={headerRef}>
          <Container>

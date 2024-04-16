@@ -12,18 +12,20 @@ import { BASE_URL } from '../utils/config'
 import { AuthContext } from '../context/AuthContext'
 
 import Demo from '../components/Basics/Demo'                           // added
-
+let weatherOfCity;
+let photo2;
 const TourDetails = () => {
    const { id } = useParams()
    const reviewMsgRef = useRef('')
    const [tourRating, setTourRating] = useState(null)
    const { user } = useContext(AuthContext)
-
+   
    // fetch data from database
    const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`)
 
-   const { photo, title, desc, duration, time,place,weather, price, reviews, city, address, distance, maxGroupSize } = tour
-
+   const { photo, title, desc, duration, time,place,weather, price, reviews, city, address, distance, maxGroupSize, GmapLink, weatherCity} = tour
+   weatherOfCity = weatherCity;
+   photo2 = photo;
    const { totalRating, avgRating } = calculateAvgRating(reviews)
 
    const options = { day: 'numeric', month: 'long', year: 'numeric' }
@@ -64,7 +66,6 @@ const TourDetails = () => {
    useEffect(() => {
       window.scrollTo(0, 0)
    }, [tour])
-
    return (
       <section>
          <Container>
@@ -85,14 +86,14 @@ const TourDetails = () => {
                                  {avgRating === 0 ? ('Not rated') : (<span>({reviews?.length})</span>)}
                               </span>
 
-                              <span><i class='ri-map-pin-fill'></i> {address}</span>
+                              <span><i className='ri-map-pin-fill'></i> {address}</span>
                            </div>
 
                            <div className="tour__extra-details">
-                              <span><i class='ri-map-pin-2-line'></i> {city}</span>
-                              <span><i class='ri-money-dollar-circle-line'></i> {price}/ per person</span>
-                              <span><i class='ri-map-pin-time-line'></i> {distance} k/m</span>
-                              <span><i class='ri-group-line'></i> {maxGroupSize} people</span>
+                              <span><i className='ri-map-pin-2-line'></i> {city}</span>
+                              <span><i className='ri-money-dollar-circle-line'></i> {price}/ per person</span>
+                              {/* <span><i className='ri-map-pin-time-line'></i> {distance} k/m</span> */}
+                              <span><i className='ri-group-line'></i> {maxGroupSize} people</span>
                            </div>
                            <h5>Famous Places</h5>
                            <p>{place}</p>
@@ -105,23 +106,23 @@ const TourDetails = () => {
                            <h5>Description</h5>
                            <p>{desc}</p>
                            <Row>
-      {/* <Col lg='13' className='mb-6'> */}
-        {/* <Subtitle subtitle={'Explore'} /> */}
-        <h5 className='Weather'>
-         Check the Weather Here!
-        </h5>
-      {/* </Col> */}
-      <Demo />
-    </Row>
-
-    <br />
+                           <address id='address'>
+                           <h5 className='Weather'>
+                              Check Map Here 😊!
+                           </h5>
+                           </address>
+                           <div className='responsive-map'>
+                           <iframe src={GmapLink} width="600" height="450"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                           </div>
+                           <h5 className='Weather'>
+                              <br/>Check the Weather of {weatherCity} Here!
+                           </h5>
+                           <Demo />
+                           </Row>
+                           <br />
                            <h5>Ask Your Queries Here!</h5>
-                           <h7><b><a href="https://tbot-azure.vercel.app/" target="_blank">Travel-Trek ChatBot😊</a></b></h7>
-                        </div>
-
-
-                         
-
+                           <h6><b><a href="https://tbot-azure.vercel.app/" target="_blank">Travel-Trek ChatBot😊</a></b></h6>
+               </div>    
                         {/* ============ TOUR REVIEWS SECTION START ============ */}
                         <div className="tour__reviews mt-4">
 
@@ -182,9 +183,8 @@ const TourDetails = () => {
          <Newsletter />
       </section>
 
-      
-
    )
 }
 
-export default TourDetails
+export default TourDetails;
+export {weatherOfCity, photo2};
