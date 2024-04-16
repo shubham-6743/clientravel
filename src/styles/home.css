@@ -1,3 +1,4 @@
+
 :root {
   --primary-color: #739cee;
   --secondary-color: #a6a6df;
@@ -158,6 +159,9 @@
 
   .experience__img {
     margin-top: 2rem;
+  }
+  .hero__img-box video {
+    width: 100%;
   }
 }
 
