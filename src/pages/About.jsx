@@ -35,6 +35,7 @@ const About = () => {
                   </div>
                </Col>
                <div className="experience__content">
+                 <br/>
                      <Subtitle subtitle={'Vision and Mission'} />
                      <h2 style={{ textAlign: 'justify' }} >Empowering global explorers to discover India's rich tapestry of culture, heritage, and Natural wonders by curating immersive and sustainable travel experiences.</h2>
                      <br/>
