@@ -11,9 +11,9 @@ import axios from "axios";
 const ThankYou = () => {
 
    const checkoutHandler = async(amount) => {
-      const { data: { key } } = await axios.get("http://www.localhost:4000/api/getkey")
+      const { data: { key } } = await axios.get("https://server-3z18.onrender.com/api/getkey")
 
-      const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+      const { data: { order } } = await axios.post("https://server-3z18.onrender.com/api/checkout", {
             amount
         })
       const options = {
