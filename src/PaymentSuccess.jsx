@@ -126,10 +126,6 @@ const PaymentSuccess = () => {
                             <table className="table">
                                 <tbody>
                                     <tr>
-                                        <td>UserID</td>
-                                        <td>{localStorage.getItem('userId')}</td>
-                                    </tr>
-                                    <tr>
                                         <td>Name</td>
                                         <td>{localStorage.getItem('userName')}</td>
                                     </tr>
