@@ -35,8 +35,18 @@ const Booking = ({ tour, avgRating }) => {
 
    const handleChange = e => {
       setBooking(prev => ({ ...prev, [e.target.id]: e.target.value }))
+      
    }
-
+   const handleChange2 = e => {
+      const inputValue = e.target.value;
+      if (inputValue > 0) {
+          setBooking(prev => ({ ...prev, [e.target.id]: inputValue }));
+      } else {
+         alert("Please enter a value greater than zero.");
+        e.target.value = "";
+      }
+  }
+  
    const serviceFee = 1000
    const totalAmount = Number(price) * Number(booking.guestSize) + Number(serviceFee)
    amountTotal=totalAmount;
@@ -44,10 +54,11 @@ const Booking = ({ tour, avgRating }) => {
 
    const handleClick = async e => {
       e.preventDefault()
-      // console.log(booking)
       if (!booking.fullName || !booking.phone || !booking.bookAt || !booking.guestSize) {
-      return alert('Please fill in all the details')
-   }
+         return alert('Please fill in all the details')
+      }
+      console.log(booking)
+
       try {
          if (!user || user === undefined || user === null) {
             return alert('Please sign in')
@@ -78,7 +89,7 @@ const Booking = ({ tour, avgRating }) => {
          <div className="booking__top d-flex align-items-center justify-content-between">
             <h3>&#x20A8; {price} <span>/per person</span></h3>
             <span className="tour__rating d-flex align-items-center">
-               <i class='ri-star-fill' style={{ 'color': 'var(--secondary-color)' }}></i>
+               <i className='ri-star-fill' style={{ 'color': 'var(--secondary-color)' }}></i>
                {avgRating === 0 ? null : avgRating} ({reviews?.length})
             </span>
          </div>
@@ -103,7 +114,8 @@ const Booking = ({ tour, avgRating }) => {
                          onChange={handleChange} />
 
                   <input type="number" placeholder='Guest' id='guestSize' required
-                     onChange={handleChange} />
+                     onChange={handleChange2} />
+                     
                </FormGroup>
             </Form>
          </div>
@@ -114,7 +126,7 @@ const Booking = ({ tour, avgRating }) => {
          <div className="booking__bottom">
             <ListGroup>
                <ListGroupItem className='border-0 px-0'>
-                  <h5 className='d-flex align-items-center gap-1'>&#x20A8; {price} <i class='ri-close-line'></i> 1 person</h5>
+                  <h5 className='d-flex align-items-center gap-1'>&#x20A8; {price} <i className='ri-close-line'></i> 1 person</h5>
                   <span>&#x20A8; {price}</span>
                </ListGroupItem>
                <ListGroupItem className='border-0 px-0'>
