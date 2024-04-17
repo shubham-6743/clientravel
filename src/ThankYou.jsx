@@ -24,7 +24,7 @@ const ThankYou = () => {
          description: "Jeewant and Shubham",
          image: "https://d2zzm7keqb9fq6.cloudfront.net/wp-content/uploads/2018/06/2018_Trek_Travel_logo_blue.png",
          order_id: order.id,
-         callback_url: "http://localhost:4000/api/paymentverification",
+         callback_url: "https://server-3z18.onrender.com/api/paymentverification",
          prefill: {
              name: "Jeewant Balyan",
              email: "shubhamchaudhary.st@gmail.com",
