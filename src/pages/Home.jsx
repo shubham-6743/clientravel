@@ -26,7 +26,7 @@ const Home = () => {
                         <Subtitle subtitle={'Explore India with Travel-Trek->'} />
                         {/* <img src={worldImg} alt="" /> */}
                      </div>
-                     <h1>Embark on a journey of a lifetime with <span className='hightlight'>Travel Trek- Where Adventure Awaits!</span></h1>
+                     <h1 style={{ textAlign: 'justify' }}>Embark on a journey of a lifetime with <span className='hightlight'>Travel Trek- Where Adventure Awaits!</span></h1>
                      <p>
                      <b>Travel Trek </b>is your ultimate travel companion, guiding wanderers to extraordinary
                         destinations. With expert insights, personalized itineraries, and a focus on cultural
