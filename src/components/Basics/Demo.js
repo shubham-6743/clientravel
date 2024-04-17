@@ -20,7 +20,7 @@ const Demo = () => {
   return (
     <>
       <div className="box">
-        <div className="inputData">
+        <div className="inputData" style={{ marginBottom: "20px" }}>
           <input
             type="search"
             className="inputFeild"
@@ -28,6 +28,13 @@ const Demo = () => {
             onChange={(event) => {
               setSearch(event.target.value);
             }}
+            placeholder="Enter city name..."
+        style={{
+          padding: "10px",
+          borderRadius: "25px",
+          border: "2px solid black",
+          width: "80%",
+          maxWidth: "300px",}}
           ></input>
         </div>
 
@@ -39,18 +46,23 @@ const Demo = () => {
           <>
             <div className="info">
               <h2 className="location"><i className="fas fa-street-view"></i>        {search}</h2>
-              <h1 className="temp">{city.temp} °Cel</h1>
-              <h3 className="tempmin_max">
+              {/* <h1 className="temp" style={{ fontSize: "1.5rem" }}>{city.temp} °Cel</h1> */}
+              <h3 className="tempmin_max"
+              style={{
+                height:"100px"
+                }}
+              >
                 Min:{city.temp_min}°Cel | Max:{city.temp_max}°Cel
               </h3>
             </div>
           </>
         )}
 
-        <div className="wave -one"></div>
+        <div className="wave -one" ></div>
         <div className="wave -two"></div>
         <div className="wave -three"></div>
       </div>
+      
     </>
   );
 };
