@@ -114,7 +114,7 @@ const Footer = () => {
                            Email:
                         </h6>
 
-                        <p className='mb-0'>balyanjeewant@gmail.com</p>
+                        <p className='mb-0'>balyanshubham10@gmail.com</p>
                      </ListGroupItem>
 
                      <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
@@ -123,7 +123,7 @@ const Footer = () => {
                            Phone:
                         </h6>
 
-                        <p className='mb-0'>+91 8439814242</p>
+                        <p className='mb-0'>+91 8439830447</p>
                      </ListGroupItem>
                   </ListGroup>
                </Col>
