@@ -13,7 +13,7 @@ const About = () => {
                   <div className="experience__content">
                      <Subtitle subtitle={'About Developers'} />
                      <h2>We're here to provide you with our Wealth of expertise.</h2>
-                     <p style={{ textAlign: 'justify' }}>A Travel Tourism Website(<b>Travel-Trek</b>) is made by <b>Jeewant Balyan, Shubham Chaudhary and Mayank Parashar </b> of Diploma in Computer Engineering as a <b>Major Project</b> at University Polytechnic, AMU under the Supervision of <b>Mr. Mohammad Naved Qureshi</b>.</p>
+                     <p style={{ textAlign: 'justify' }}>A Travel Tourism Website(<b>Travel-Trek</b>) is made by <b>Shubham Chaudhary & Jeewant Balyan </b> of Diploma in Computer Science & Engineering as a <b>Major Project</b> at AMU under the Supervision of <b>Mr. Mohammad Naved Qureshi</b>.</p>
                   </div>
 
                   <div className="counter__wrapper d-flex align-items-center gap-5">
